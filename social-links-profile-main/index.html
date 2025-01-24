@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | Social links profile</title>
+  <style>
+    @font-face {
+      font-family: myfont;
+      src: url(assets/fonts/Inter-VariableFont_slnt\,wght.ttf);
+    }
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    *{
+      margin: 0;
+      padding: 0;
+      border: 0;
+    }
+    body{
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: hsl(0, 0%, 8%);
+      color: hsl(0, 0%, 100%);
+      font-family: "myfont";
+      font-size: 14px;
+    }
+    .card{
+      width: 290px;
+      height: 450px;
+      background-color: hsl(0, 0%, 12%);
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .card-box{
+      width: 80%;
+      height: 85%;
+
+    }
+    .links{
+      width: 100%;
+      margin-top: 20px;
+    }
+    .buttons{
+      width: 100%;
+      height: 35px;
+      text-align: center;
+      line-height: 35px;
+      margin-top: 10px;
+      background-color: hsl(0, 0%, 20%);
+      font-size: 11px;
+      border-radius: 5px;
+    }
+    .profile{
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+    a{
+      text-decoration: none;
+      color: white;
+    }
+    a:hover .buttons{
+      background-color: hsl(75, 94%, 57%);
+      color: hsl(0, 0%, 8%);
+    }
+    h2{
+      font-size: 18px;
+    }
+    @media(max-width:375px){
+      .card{
+        width: 270px;
+        height: 440px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="card-box">
+      <div class="profile">
+        <img src="assets/images/avatar-jessica.jpeg" width="65px" height="65px" style="border-radius: 50%; margin-bottom: 20px;">
+        <h2>Jessica Randall</h2>
+        <span style="color: hsl(75, 94%, 57%); font-size: 10px; margin-top: 5px;"><b>London, United Kingdom</b></span>
+        <p style="font-size: 10px; margin-top: 20px;">"Front-end developer and avid reader."</p>
+      </div>
+      <div class="links">
+        <a href="#"><div class="buttons"><b>Github</b></div></a>
+        <a href="#"><div class="buttons"><b>Frontend Mentor</b></div></a>
+        <a href="#"> <div class="buttons"><b>Linkedin</b></div></a>
+        <a href="#"><div class="buttons"><b>Twitter</b></div></a>
+        <a href="#"><div class="buttons"><b>Instagram</b></div></a>
+      </div>
+    </div>
+  </div>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Kadir Bili</a>.
+  </div>
+</body>
+</html>
