@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <title>Frontend Mentor | NFT preview card component</title>
+    <style>
+      .attribution { font-size: 11px; text-align: center; }
+      .attribution a { color: hsl(228, 45%, 44%); }
+      *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+      }
+      body{
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: hsl(217, 54%, 11%);
+        color: hsl(215, 51%, 70%);
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 13px;
+      }
+      .main-box{
+        width: 300px;
+        height: 490px;
+        background-color: hsl(216, 50%, 16%);
+        padding: 20px;
+        box-shadow: 
+        0 0 20px rgba(0, 0, 0, 0.1),
+        0 0 40px rgba(0, 0, 0, 0.15),
+        0 0 60px rgba(0, 0, 0, 0.2),
+         0 0 80px rgba(0, 0, 0, 0.25);
+         border-radius: 15px;
+      }
+      .cripto-day{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        font-size: 15px;
+      }
+      .profile{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        margin: 10px 0 0 0;
+      }
+      .mainfoto{
+        width: 100%;
+        height: 100%;
+        position: relative;
+        border-radius: 5px; 
+        margin-bottom: 15px;
+
+      }
+      .mainfoto > a > img:nth-child(2){
+        position: fixed;
+        display: none;
+      }
+      .mainfoto > a{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .mainfoto > a:hover > img:nth-child(2){
+        display: block;
+      }
+      .mainfoto > a > div{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-color: hsl(178, 100%, 50%);
+        border-radius: 5px;
+        opacity: 0.5;
+        display: none;
+      }
+      .mainfoto > a:hover > div{
+        display: block;
+      }
+      #coin-name{
+        margin-bottom: 10px; 
+        color: white; 
+        font-size: 18px;
+      }
+      a{
+        text-decoration: none;
+        color:white;
+      }
+      a:hover{
+        color: hsl(178, 100%, 50%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-box">
+      <div class="content">
+        <div class="mainfoto">
+          <a href="https://github.com/Magnitude56">
+            <div></div>
+            <img src="images/icon-view.svg">
+            <img src="images/image-equilibrium.jpg" width="100%" style="border-radius: 5px;">
+          </a>
+        </div>
+        <h3 id="coin-name"><a href="https://github.com/Magnitude56">Equilibrium #3429</a></h3>
+        <p style="margin-bottom: 15px; font-size: 15px;">Our Equilibrium collection promotes balance and calm.</p>
+        <div class="cripto-day" style="margin-bottom: 15px;">
+          <span style="color: hsl(178, 100%, 50%); display: flex;"><svg width="11" height="18" xmlns="http://www.w3.org/2000/svg"><path d="M11 10.216 5.5 18 0 10.216l5.5 3.263 5.5-3.262ZM5.5 0l5.496 9.169L5.5 12.43 0 9.17 5.5 0Z" fill="#00FFF8"/></svg>&nbsp;&nbsp;<b>0.041 ETH</b></span>
+          <span style="display: flex; align-items: center;"><svg width="17" height="17" xmlns="http://www.w3.org/2000/svg"><path d="M8.305 2.007a6.667 6.667 0 1 0 0 13.334 6.667 6.667 0 0 0 0-13.334Zm2.667 7.334H8.305a.667.667 0 0 1-.667-.667V6.007a.667.667 0 0 1 1.334 0v2h2a.667.667 0 0 1 0 1.334Z" fill="#8BACD9"/></svg>&nbsp;&nbsp;3 days left</span>
+        </div>
+        <hr style="opacity: 0.1;">
+        <div class="profile">
+          <img src="images/image-avatar.png" width="28px" style="border: 1px solid white; border-radius: 50%; margin-right: 10px;"> Creation of&nbsp;<span style="color: white;"><a href="https://github.com/Magnitude56">Jules Wyvern</a> </span> 
+        </div>
+      </div>
+    </div>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://github.com/Magnitude56">Kadir Bili</a>.
+    </div>
+    
+  </body>
+</html>
