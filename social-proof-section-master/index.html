@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png"/>
+    <!--FONT AREA-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+    <!--FONT AREA-->
+    <title>Frontend Mentor | Social proof section</title>
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+      .inter-myFont {
+        font-family: "Inter", serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body{
+        height: 100vh;
+        font-size: 15px;
+        background-color: hsl(0, 0%, 100%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        overflow-x: hidden;
+      }
+      .svg-bg{
+        position: absolute;
+        z-index: -10;
+      }
+      .svg-bg:nth-child(1){
+        left: 0;
+        top: 0;
+      }
+      .svg-bg:nth-child(2){
+        right: 0;
+        bottom: 0;
+      }
+      .main-box{
+        width: 1100px;
+        height: 590px;
+      }
+      .box1{
+        width: 100%;
+        height: 53%;
+        display: flex;
+      }
+      .content{
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+      h1{
+        width: 350px;
+        font-size: 45px;
+        color: hsl(300, 43%, 22%);
+        font-weight: 800;
+        margin-bottom: 20px;
+      }
+      .content > p{
+        width: 400px;
+        color: hsl(300, 43%, 22%, 0.9);
+        line-height: 20px;
+      }
+      .box-stars{
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .stars{
+        width: 450px;
+        height: 55px;
+        background-color: hsl(300, 24%, 96%);
+        margin-bottom: 10px;
+        display: flex;
+        align-items:center;
+        border-radius: 10px;
+        font-weight: bold;
+      }
+      .stars:nth-child(1){
+        align-self: flex-start;
+      }
+      .stars:nth-child(3){
+        align-self: flex-end;
+      }
+      h3{
+        font-size: 15px;
+        color: hsl(300, 43%, 22%);
+      }
+      .box2{
+        width: 100%;
+        height: 47%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+      .card-profiles{
+        width: 350px;
+        height: 230px;
+        background-color: hsl(300, 43%, 22%, 0.9);
+        border-radius: 7px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .card-profiles:nth-child(1){
+        align-self: flex-start
+      }
+      .card-profiles:nth-child(3){
+        align-self: flex-end
+      }
+      .profile-top{
+        width: 83%;
+        height: 30%;
+        display: flex;
+        padding: 5px 0 0 0;
+      }
+      img{
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin-right: 20px;
+      }
+      .verification{
+        color: hsl(333, 80%, 67%);
+      }
+      .profile-text{
+        width: 85%;
+        height: 40%;
+        line-height: 22px;
+      }
+      @media(max-width:1100px){
+        body{
+          height: 900px;
+          display: block;
+        }
+        .main-box{
+          width: 100%;
+          margin-top: 30px;
+        }
+        .stars:nth-child(1){
+          align-self: center;
+        }
+        .stars:nth-child(3){
+          align-self: center;
+        }
+        .content{
+          align-items: center;
+        }
+        .box2{
+          justify-content: space-evenly;
+        }
+        .card-profiles:nth-child(1)
+        {
+          margin: 20px 0 50px 0;
+        }
+        .card-profiles:nth-child(3)
+        {
+          margin: 20px 0 50px 0;
+        }
+        .card-profiles:nth-child(2){
+          order: 3;
+        }
+      }
+      @media (max-width:900px)
+      {
+        body{
+          height: 1100px;
+          display: block;
+          font-size: 15px;
+          background-color: hsl(0, 0%, 100%);
+        }
+        .main-box{
+          width: 100vw;
+        }
+        .box1{
+          width: 100%;
+          height: auto;
+          display: block;
+        }
+        .content{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        }
+        h1{
+          text-align: center;
+          margin-top: 50px;
+        }
+        .content > p {
+          width: 60%;
+          text-align: center;
+        }
+        .box-stars{
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+        }
+        .stars:nth-child(1){
+          align-self: center;
+        }
+        .stars:nth-child(3){
+          align-self: center;
+        }
+      }
+      @media(max-width:700px){
+        body{
+          height: 1400px;
+          display: block;
+        }
+        .main-box{
+          width: 100%;
+        }
+        .card-profiles:nth-child(1)
+        {
+          margin: 20px 0 20px 0;
+        }
+        .card-profiles:nth-child(2){
+          order: 2;
+        }
+        .card-profiles:nth-child(3){
+          margin: 20px 0 0 0;
+          order: 3;
+        }
+        .content > p {
+          width: 350px;
+        }
+        .box-stars{
+          margin-top: 30px;
+        }
+        .stars{
+          width: 350px;
+          height: 80px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          line-height: 25px;
+        }
+        .svg-bg{
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body class="inter-myFont">
+    <svg class="svg-bg" width="584" height="362" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient x1="100%" y1="69.212%" x2="9.399%" y2="32.183%" id="a"><stop stop-color="#8A4389" stop-opacity="0" offset="0%"/><stop stop-color="#512051" offset="100%"/><stop stop-color="#512051" offset="100%"/><stop stop-color="#512051" offset="100%"/></linearGradient></defs><path d="M0 362c40.022-82.8 115.736-135.154 227.141-157.064 167.108-32.864 103.85-66.012 185.949-131.796C467.823 29.284 524.793 4.904 584 0v362H0z" transform="rotate(180 292 181)" fill="url(#a)" fill-rule="evenodd" opacity=".05"/></svg>
+    <svg class="svg-bg" width="1085" height="673" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient x1="100%" y1="69.237%" x2="9.399%" y2="32.159%" id="a"><stop stop-color="#8A4389" stop-opacity="0" offset="0%"/><stop stop-color="#512051" offset="100%"/><stop stop-color="#512051" offset="100%"/><stop stop-color="#512051" offset="100%"/></linearGradient></defs><path d="M355 800c74.356-153.934 215.022-251.268 422-292 310.466-61.099 192.94-122.724 345.47-245.025C1224.157 181.442 1330 136.116 1440 127v673H355z" transform="translate(-355 -127)" fill="url(#a)" fill-rule="evenodd" opacity=".05"/></svg>
+    <div class="main-box">
+      <div class="box1">
+        <div class="content">
+          <h1>10,000+ of our users love our products.</h1>
+          <p>We only provide great products combined with excellent customer service.
+          See what our satisfied customers are saying about our services.</p>
+        </div>
+        <div class="box-stars">
+          <div class="stars">
+            <span style="margin: 0 30px 0 30px; word-spacing: 5px;">
+              <svg width="17" height="16" xmlns="http://www.w3.org/2000/svg"><path d="M16.539 6.097a.297.297 0 00-.24-.202l-5.36-.779L8.542.26a.296.296 0 00-.53 0L5.613 5.117l-5.36.779a.297.297 0 00-.165.505l3.88 3.78-.917 5.34a.297.297 0 00.43.312l4.795-2.52 4.794 2.52a.296.296 0 00.43-.313l-.916-5.338L16.464 6.4c.08-.08.11-.197.075-.304z" fill="#EF9546" fill-rule="nonzero"/></svg>
+              <svg width="17" height="16" xmlns="http://www.w3.org/2000/svg"><path d="M16.539 6.097a.297.297 0 00-.24-.202l-5.36-.779L8.542.26a.296.296 0 00-.53 0L5.613 5.117l-5.36.779a.297.297 0 00-.165.505l3.88 3.78-.917 5.34a.297.297 0 00.43.312l4.795-2.52 4.794 2.52a.296.296 0 00.43-.313l-.916-5.338L16.464 6.4c.08-.08.11-.197.075-.304z" fill="#EF9546" fill-rule="nonzero"/></svg>
+              <svg width="17" height="16" xmlns="http://www.w3.org/2000/svg"><path d="M16.539 6.097a.297.297 0 00-.24-.202l-5.36-.779L8.542.26a.296.296 0 00-.53 0L5.613 5.117l-5.36.779a.297.297 0 00-.165.505l3.88 3.78-.917 5.34a.297.297 0 00.43.312l4.795-2.52 4.794 2.52a.296.296 0 00.43-.313l-.916-5.338L16.464 6.4c.08-.08.11-.197.075-.304z" fill="#EF9546" fill-rule="nonzero"/></svg>
+              <svg width="17" height="16" xmlns="http://www.w3.org/2000/svg"><path d="M16.539 6.097a.297.297 0 00-.24-.202l-5.36-.779L8.542.26a.296.296 0 00-.53 0L5.613 5.117l-5.36.779a.297.297 0 00-.165.505l3.88 3.78-.917 5.34a.297.297 0 00.43.312l4.795-2.52 4.794 2.52a.296.296 0 00.43-.313l-.916-5.338L16.464 6.4c.08-.08.11-.197.075-.304z" fill="#EF9546" fill-rule="nonzero"/></svg>
+              <svg width="17" height="16" xmlns="http://www.w3.org/2000/svg"><path d="M16.539 6.097a.297.297 0 00-.24-.202l-5.36-.779L8.542.26a.296.296 0 00-.53 0L5.613 5.117l-5.36.779a.297.297 0 00-.165.505l3.88 3.78-.917 5.34a.297.297 0 00.43.312l4.795-2.52 4.794 2.52a.296.296 0 00.43-.313l-.916-5.338L16.464 6.4c.08-.08.11-.197.075-.304z" fill="#EF9546" fill-rule="nonzero"/></svg>
+            </span>
+            <h3>Rated 5 Stars in Reviews</h3>
+          </div>
+          <div class="stars">
+            <span style="margin: 0 30px 0 30px; word-spacing: 5px;">
+              <svg width="17" height="16" xmlns="http://www.w3.org/2000/svg"><path d="M16.539 6.097a.297.297 0 00-.24-.202l-5.36-.779L8.542.26a.296.296 0 00-.53 0L5.613 5.117l-5.36.779a.297.297 0 00-.165.505l3.88 3.78-.917 5.34a.297.297 0 00.43.312l4.795-2.52 4.794 2.52a.296.296 0 00.43-.313l-.916-5.338L16.464 6.4c.08-.08.11-.197.075-.304z" fill="#EF9546" fill-rule="nonzero"/></svg>
+              <svg width="17" height="16" xmlns="http://www.w3.org/2000/svg"><path d="M16.539 6.097a.297.297 0 00-.24-.202l-5.36-.779L8.542.26a.296.296 0 00-.53 0L5.613 5.117l-5.36.779a.297.297 0 00-.165.505l3.88 3.78-.917 5.34a.297.297 0 00.43.312l4.795-2.52 4.794 2.52a.296.296 0 00.43-.313l-.916-5.338L16.464 6.4c.08-.08.11-.197.075-.304z" fill="#EF9546" fill-rule="nonzero"/></svg>
+              <svg width="17" height="16" xmlns="http://www.w3.org/2000/svg"><path d="M16.539 6.097a.297.297 0 00-.24-.202l-5.36-.779L8.542.26a.296.296 0 00-.53 0L5.613 5.117l-5.36.779a.297.297 0 00-.165.505l3.88 3.78-.917 5.34a.297.297 0 00.43.312l4.795-2.52 4.794 2.52a.296.296 0 00.43-.313l-.916-5.338L16.464 6.4c.08-.08.11-.197.075-.304z" fill="#EF9546" fill-rule="nonzero"/></svg>
+              <svg width="17" height="16" xmlns="http://www.w3.org/2000/svg"><path d="M16.539 6.097a.297.297 0 00-.24-.202l-5.36-.779L8.542.26a.296.296 0 00-.53 0L5.613 5.117l-5.36.779a.297.297 0 00-.165.505l3.88 3.78-.917 5.34a.297.297 0 00.43.312l4.795-2.52 4.794 2.52a.296.296 0 00.43-.313l-.916-5.338L16.464 6.4c.08-.08.11-.197.075-.304z" fill="#EF9546" fill-rule="nonzero"/></svg>
+              <svg width="17" height="16" xmlns="http://www.w3.org/2000/svg"><path d="M16.539 6.097a.297.297 0 00-.24-.202l-5.36-.779L8.542.26a.296.296 0 00-.53 0L5.613 5.117l-5.36.779a.297.297 0 00-.165.505l3.88 3.78-.917 5.34a.297.297 0 00.43.312l4.795-2.52 4.794 2.52a.296.296 0 00.43-.313l-.916-5.338L16.464 6.4c.08-.08.11-.197.075-.304z" fill="#EF9546" fill-rule="nonzero"/></svg>
+            </span>
+            <h3>Rated 5 Stars in Report Guru</h3>
+          </div>
+          <div class="stars">
+            <span style="margin: 0 30px 0 30px; word-spacing: 5px;">
+              <svg width="17" height="16" xmlns="http://www.w3.org/2000/svg"><path d="M16.539 6.097a.297.297 0 00-.24-.202l-5.36-.779L8.542.26a.296.296 0 00-.53 0L5.613 5.117l-5.36.779a.297.297 0 00-.165.505l3.88 3.78-.917 5.34a.297.297 0 00.43.312l4.795-2.52 4.794 2.52a.296.296 0 00.43-.313l-.916-5.338L16.464 6.4c.08-.08.11-.197.075-.304z" fill="#EF9546" fill-rule="nonzero"/></svg>
+              <svg width="17" height="16" xmlns="http://www.w3.org/2000/svg"><path d="M16.539 6.097a.297.297 0 00-.24-.202l-5.36-.779L8.542.26a.296.296 0 00-.53 0L5.613 5.117l-5.36.779a.297.297 0 00-.165.505l3.88 3.78-.917 5.34a.297.297 0 00.43.312l4.795-2.52 4.794 2.52a.296.296 0 00.43-.313l-.916-5.338L16.464 6.4c.08-.08.11-.197.075-.304z" fill="#EF9546" fill-rule="nonzero"/></svg>
+              <svg width="17" height="16" xmlns="http://www.w3.org/2000/svg"><path d="M16.539 6.097a.297.297 0 00-.24-.202l-5.36-.779L8.542.26a.296.296 0 00-.53 0L5.613 5.117l-5.36.779a.297.297 0 00-.165.505l3.88 3.78-.917 5.34a.297.297 0 00.43.312l4.795-2.52 4.794 2.52a.296.296 0 00.43-.313l-.916-5.338L16.464 6.4c.08-.08.11-.197.075-.304z" fill="#EF9546" fill-rule="nonzero"/></svg>
+              <svg width="17" height="16" xmlns="http://www.w3.org/2000/svg"><path d="M16.539 6.097a.297.297 0 00-.24-.202l-5.36-.779L8.542.26a.296.296 0 00-.53 0L5.613 5.117l-5.36.779a.297.297 0 00-.165.505l3.88 3.78-.917 5.34a.297.297 0 00.43.312l4.795-2.52 4.794 2.52a.296.296 0 00.43-.313l-.916-5.338L16.464 6.4c.08-.08.11-.197.075-.304z" fill="#EF9546" fill-rule="nonzero"/></svg>
+              <svg width="17" height="16" xmlns="http://www.w3.org/2000/svg"><path d="M16.539 6.097a.297.297 0 00-.24-.202l-5.36-.779L8.542.26a.296.296 0 00-.53 0L5.613 5.117l-5.36.779a.297.297 0 00-.165.505l3.88 3.78-.917 5.34a.297.297 0 00.43.312l4.795-2.52 4.794 2.52a.296.296 0 00.43-.313l-.916-5.338L16.464 6.4c.08-.08.11-.197.075-.304z" fill="#EF9546" fill-rule="nonzero"/></svg>
+            </span>
+            <h3>Rated 5 Stars in BestTech</h3>
+          </div>
+        </div>
+      </div>
+      <div class="box2">
+        <div class="card-profiles">
+          <div class="profile-top">
+            <img src="images/image-colton.jpg"> 
+            <div>
+              Colton Smith<br>
+              <span class="verification">Verified Buyer</span>
+            </div>
+          </div>
+          <div class="profile-text">
+            <p>"We needed the same printed design as the one we had ordered a week prior.
+            Not only did they find the original order, but we also received it in time.
+            Excellent!"</p>
+          </div>
+        </div>
+        <div class="card-profiles">
+          <div class="profile-top">
+            <img src="images/image-irene.jpg">
+            <div>
+              Irene Roberts<br>
+              <span class="verification">Verified Buyer</span>
+            </div> 
+          </div>
+          <div class="profile-text">
+            <p>"Customer service is always excellent and very quick turn around. Completely
+              delighted with the simplicity of the purchase and the speed of delivery."</p>
+          </div>
+        </div>
+        <div class="card-profiles">
+          <div class="profile-top">
+            <img src="images//image-anne.jpg"> 
+            <div>
+               Anne Wallace<br>
+              <span class="verification">Verified Buyer</span>
+            </div>
+          </div>
+          <div class="profile-text">
+            <p>"Put an order with this company and can only praise them for the very high
+              standard. Will definitely use them again and recommend them to everyone!"</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+    -->
+  </body>
+</html>
